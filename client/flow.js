@@ -1,5 +1,5 @@
 const URL = "https://teachablemachine.withgoogle.com/models/LUWkaHPj4/"
-const DTCURL = "http://localhost:3000/api/dtcdata"
+const DTCURL = "https://dtcmask.herokuapp.com/api/dtcdata"
 var isMasked = false;
 var isNotMasked = false;
 let model, webcam, labelContainer, maxPredictions;
