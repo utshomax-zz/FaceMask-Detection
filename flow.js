@@ -81,9 +81,10 @@ async function predict() {
 }
 
 async function sendToAdmin(maskState){
+    let date = new Date()
     var data ={
         state:maskState,
-        dateTime:Date.now().toUTCString()
+        dateTime: date.toUTCString()
     }
     console.log(data)
     const response = await fetch(DTCURL, {
