@@ -83,8 +83,9 @@ async function predict() {
 async function sendToAdmin(maskState){
     var data ={
         state:maskState,
-        dateTime:Date.now()
+        dateTime:Date.now().toUTCString()
     }
+    console.log(data)
     const response = await fetch(DTCURL, {
         method: 'POST', 
         mode: 'cors', 
