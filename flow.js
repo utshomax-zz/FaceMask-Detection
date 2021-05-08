@@ -84,7 +84,7 @@ async function sendToAdmin(maskState){
     let date = new Date()
     var data ={
         state:maskState,
-        dateTime: date.toISOString();
+        dateTime: date.toISOString()
     }
     console.log(data)
     const response = await fetch(DTCURL, {
