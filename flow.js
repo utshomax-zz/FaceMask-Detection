@@ -81,10 +81,10 @@ async function predict() {
 }
 
 async function sendToAdmin(maskState){
-    let date = new Date()
+    let str = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
     var data ={
         state:maskState,
-        dateTime: date.toISOString()
+        dateTime: str
     }
     console.log(data)
     const response = await fetch(DTCURL, {
