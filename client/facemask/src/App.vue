@@ -127,7 +127,8 @@
       },
       async sendToAdmin(maskState) {
         var data = {
-          state: maskState
+          state: maskState,
+          dateTime:Date.now()
         }
         const response = await fetch(DTCURL, {
           method: 'POST',

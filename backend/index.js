@@ -37,12 +37,12 @@ else
 var port = process.env.PORT || 3000;
 
 // Welcome message
-app.get('/', (req, res) => res.send('Welcome to Express'));
+app.get('/', (req, res) => res.send('Welcome to FaceMask_Detection!'));
 
 //Use API routes in the App
 app.use('/api', apiRoutes)
 
 // Launch app to the specified port
 app.listen(port, function() {
-    console.log("Running FirstRest on Port "+ port);
+    console.log("Running api on Port "+ port);
 });

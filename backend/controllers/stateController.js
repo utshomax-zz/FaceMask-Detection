@@ -1,13 +1,13 @@
 var Dtc = require('../model/maskModel');
 exports.add = function (req, res) {
     var data = new Dtc({
-        state:req.body.state
+        state:req.body.state,
+        dateTime:req.body.dateTime
     });
     //Save and check error
     data.save(function (err) {
         if (err)
             res.json(err);
-
         res.json({
             message: "New state Added!",
             data: data
