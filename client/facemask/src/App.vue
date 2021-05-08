@@ -126,9 +126,10 @@
         })
       },
       async sendToAdmin(maskState) {
+        let str = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata' });
         var data = {
           state: maskState,
-          dateTime:Date.now()
+          dateTime:str
         }
         const response = await fetch(DTCURL, {
           method: 'POST',
