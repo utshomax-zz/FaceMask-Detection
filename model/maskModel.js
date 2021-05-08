@@ -4,7 +4,7 @@ var Schema = mongoose.Schema;
 
 var DtcSchema = new Schema({
     state: {type: Boolean, required: true},
-    dateTime: {type: Date, default: Date.now()},
+    dateTime: {type: String, required:true},
 });
 
 
