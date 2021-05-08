@@ -105,7 +105,6 @@
           this.maskS = 1
           this.sendToAdmin(true)
         }
-
         ,
       async beep(cmd) {
         if (cmd) {
