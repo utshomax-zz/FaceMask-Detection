@@ -12,6 +12,6 @@ var DtcSchema = new Schema({
 var Dtc = module.exports = mongoose.model('Dtc', DtcSchema);
 module.exports.get = function (callback, limit) {
     Dtc.find(callback)
-    .sort({dateTime: -1})
+    .sort({dateTime: 1})
     .limit(limit); 
  }
