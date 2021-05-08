@@ -4,6 +4,7 @@ exports.add = function (req, res) {
         state:req.body.state,
         dateTime:req.body.dateTime
     });
+    console.log(data)
     //Save and check error
     data.save(function (err) {
         if (err)
