@@ -12,11 +12,11 @@ async function getdtcdata(){
     let f_data = data.data
     var view = ""
     for(var i in f_data ){
-       let date = new Date(f_data[i].dateTime)
+       let sdate = f_data[i].dateTime.split(',')
        view += `<tr>
         <td data-label="Count">${i}</td>
-        <td data-label="Date">${date.getDay().toString() +"-"+ date.getMonth().toString() +"-"+ date.getFullYear().toString()}</td>
-        <td data-label="Time">${date.getHours().toString() +":"+ date.getMinutes().toString() +":"+ date.getSeconds().toString()}</td>
+        <td data-label="Date">${sdate[0]}</td>
+        <td data-label="Time">${sdate[1]}</td>
         <td data-label="Status">
            ${ f_data[i].state ? ok : fail }
         </td></tr>`;
